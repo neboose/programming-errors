@@ -13,6 +13,10 @@ html {
 
 /* ===Code Styles=== */
 
+code {
+    font-family: "Inconsolata", monospace;
+}
+
 pre code {
     display: block;
     background-color: lightgray;
@@ -42,4 +46,12 @@ pre code {
     font-style: normal;
     font-weight: 700;
     src: url('/fonts/open-sans-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inconsolata.woff2') format('woff2');
 }
