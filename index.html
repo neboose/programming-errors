@@ -14,9 +14,18 @@
                 <hr>
             </header>
             <main>
+                <p>There are many problems with programming, but we will focus on numbers. The three we will look at are</p>
+                <ol>
+                    <li>Integer truncation</li>
+                    <li>Floating-point imprecision</li>
+                    <li>Integer overflow</li>
+                </ol>
+                <p>These all have to do with numbers not behaving the way they are supposed to be. Integer truncation is an
+                easy problem to fix, but floating-point imprecision and integer overflow are still problems today, and were back then.
+                For example, the Boeing 787 had to be reset at least every 249 days, otherwise its clock would overflow.</p>
                 <section>
                     <header>
-                        <h2>Float Truncation</h2>
+                        <h2>Integer Truncation</h2>
                     </header>
                     <p>Let's say you were making a division quiz to test on your students in C, who are working on division with decimals.
                     You decide to start relatively easy, with 5 / 2. Your code might look something like this. (Let's say you implemented <code>get_float

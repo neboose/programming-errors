@@ -32,6 +32,11 @@ pre code {
     text-wrap: initial;
     padding: 0.5em;
 }
+/* ===List Styles=== */
+
+ol {
+    padding-left: 1em;
+}
 
 /* ===Heading and Footer Styles=== */
 
