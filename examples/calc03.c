@@ -1,3 +1,4 @@
+// calc03.c: introducing the double type
 #include <stdio.h>
 
 double get_double(char *prompt);

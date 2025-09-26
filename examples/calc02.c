@@ -1,3 +1,4 @@
+// calc02.c: introduction to floating-point imprecision
 #include <stdio.h>
 
 float get_float(char *prompt);
