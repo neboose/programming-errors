@@ -169,13 +169,53 @@ Answer: -194305179</code></pre>
     long long b = get_long_long("b: ");
     printf("Answer: %lli\n", a * b);
 }</code></pre>
-                <p>If you don't care about negative numbers, you may add <code>unsigned</code> to double its range in the positive direction, like this:</p>
+                    <p>If you don't care about negative numbers, you may add <code>unsigned</code> to double its range in the positive direction, like this:</p>
 <pre><code>int main(void)
 {
     unsigned int a = get_unsigned_int("a: ");
     unsigned int b = get_unsigned_int("b: ");
     printf("Answer: %u\n", a * b);
 }</code></pre>
+                    <p>Here is a table showing the minimum ranges for these data types.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Minimum Range</th>
+                                <th>Typical Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>int</code></td>
+                                <td>-32,768 to 32,767</td>
+                                <td>-2,147,483,648 to 2,147,483,647</td>
+                            </tr>
+                            <tr>
+                                <td><code>unsigned int</code></td>
+                                <td>0 to 65,535</td>
+                                <td>0 to 4,294,967,295</td>
+                            </tr>
+                            <tr>
+                                <td><code>long</code></td>
+                                <td>-2,147,483,648 to 2,147,483,647</td>
+                                <td>-9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
+                            </tr>
+                            <tr>
+                                <td><code>unsigned long</code></td>
+                                <td>0 to 4,294,967,295</td>
+                                <td>0 to 18,446,744,073,709,551,615</td>
+                            </tr>
+                            <tr>
+                                <td><code>long long</code></td>
+                                <td>Almost always -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807.</td>
+                            </tr>
+                            <tr>
+                                <td><code>unsigned long long</code></td>
+                                <td>Almost always 0 to 18,446,744,073,709,551,615</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
             </main>
             <footer>For the examples used in this article, see all of them <a href="examples">here</a>.</footer>
