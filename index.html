@@ -139,21 +139,43 @@ int main(void)
     int b = get_int("b: ");
     printf("Answer: %i\n", a * b);
 }</code></pre>
-                <p>You give the students a chance to explore the program on their own. One 
-                student comes up to you and says, <q>Why is the answer negative? I typed in two positive numbers.</q>
-                You walk over and see the student's terminal:</p>
+                    <p>You give the students a chance to explore the program on their own. One 
+                    student comes up to you and says, <q>Why is the answer negative? I typed in two positive numbers.</q>
+                    You walk over and see the student's terminal:</p>
 <pre><code>$ cc mul.c -o mul
 $ ./mul
 a: 49353
 b: 51678
 Answer: -194305179</code></pre>
-                <p>Why is it negative? The answer is because of <i>integer overflow</i>. Integers take up 4 bytes of space.
-                This is 32 bits (<span class="equation">4 * 8</span>). To calculate the amount an integer can go up to, we can use the following equation:</p>
-                <div class="equation">2<sup>32 - 1</sup>- 1</div>
-                <p>The 2 is because it is base-2, or the binary system. We have to subtract one bit to account for the other
-                half to be negative numbers, and subtract another one to account for 0. This expression evaluates to be
-                2,147,483,647. <span class="equation">49353 * 51678</span> evaluates to be 2,550,464,334, more than the amount that can be stored in an
-                integer. As a result, it wraps around to -2,147,483,647 and cuts that extra amount off.</p>
+                    <p>Why is it negative? The answer is because of <i>integer overflow</i>. Integers take up 4 bytes of space.
+                    This is 32 bits (<span class="equation">4 * 8</span>). To calculate the amount an integer can go up to, we can use the following equation:</p>
+                    <div class="equation">2<sup>32 - 1</sup>- 1</div>
+                    <p>The 2 is because it is base-2, or the binary system. We have to subtract one bit to account for the other
+                    half to be negative numbers, and subtract another one to account for 0. This expression evaluates to be
+                    2,147,483,647. <span class="equation">49353 * 51678</span> evaluates to be 2,550,464,334, more than the amount that can be stored in an
+                    integer. As a result, it wraps around to -2,147,483,647 and cuts that extra amount off.</p>
+                    <p>To fix this, we can use the <code>long</code> type, or the <code>long long</code> type. These types 
+                    use up more memory, so it can go higher.</p>
+<pre><code>int main(void)
+{
+    long a = get_long("a: ");
+    long b = get_long("b: ");
+    printf("Answer: %li\n", a * b);
+}</code></pre>
+
+<pre><code>int main(void)
+{
+    long long a = get_long_long("a: ");
+    long long b = get_long_long("b: ");
+    printf("Answer: %lli\n", a * b);
+}</code></pre>
+                <p>If you don't care about negative numbers, you may add <code>unsigned</code> to double its range in the positive direction, like this:</p>
+<pre><code>int main(void)
+{
+    unsigned int a = get_unsigned_int("a: ");
+    unsigned int b = get_unsigned_int("b: ");
+    printf("Answer: %u\n", a * b);
+}</code></pre>
                 </section>
             </main>
             <footer>For the examples used in this article, see all of them <a href="examples">here</a>.</footer>
