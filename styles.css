@@ -55,6 +55,16 @@ p {
     font-family: "Cambria Math", Cambria, Calibri, "Open Sans", sans-serif;
 }
 
+/* ===Table Styles=== */
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid black;
+}
+
 /* ===Font Declarations=== */
 
 @font-face {
