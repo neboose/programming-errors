@@ -79,6 +79,24 @@ if (answer == (float)a / 5)</code></pre>
                     </div>
                     <footer>For the examples used in this section, see all of them <a href="examples">here</a>.</footer>
                 </section>
+                <hr>
+                <section>
+                    <header>
+                        <h2>Floating-point Imprecision</h2>
+                    </header>
+                    <p>Here is another problem with programming: <i>floating-point imprecision</i>. Let's say you were making
+                    a calculator for your students on division for your lesson. This is probably your starting point (again,
+                    let's assume you were getting <code>get_float</code> from an external source).</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    float a = get_float("a: ");
+    float b = get_float("b: ");
+    printf("Answer: %f\n", a / b);
+}
+</code></pre>
+                </section>
             </main>
         </article>
     </body>
