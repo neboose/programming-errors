@@ -124,6 +124,37 @@ double b = get_double("b: ");</code></pre>
     printf("Numbers are the same!\n");
 }</code></pre>
                 </section>
+                <hr>
+                <section>
+                    <header>
+                        <h2>Integer Overflow</h2>
+                    </header>
+                    <p>In your class, you have moved on from division, and are now on to multiplication. You make a 
+                    simple program that multiplies two integers together:</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int a = get_int("a: ");
+    int b = get_int("b: ");
+    printf("Answer: %i\n", a * b);
+}</code></pre>
+                <p>You give the students a chance to explore the program on your own. One 
+                student comes up to you and says, <q>Why is the answer negative? I typed in two positive numbers.</q>
+                You walk over and see the student's terminal:</p>
+<pre><code>$ cc mul.c -o mul
+$ ./mul
+a: 49353
+b: 51678
+Answer: -194305179</code></pre>
+                <p>Why is it negative? The answer is because of <i>integer overflow</i>. Integers take up 4 bytes of space.
+                This is 32 bits (4 * 8). To calculate the amount an integer can go up to, we can use the following equation:</p>
+                <p>2<sup>32 - 1</sup>- 1</p>
+                <p>The 2 is because it is base-2, or the binary system. We have to subtract one bit to account for the other
+                half to be negative numbers, and subtract another one to account for 0. This expression evaluates to be
+                2,147,483,647. 49353 * 51678 evaluates to be 2,550,464,334, more than the amount that can be stored in an
+                integer. As a result, it wraps around to -2,147,483,647 and cuts that extra amount off.</p>
+                </section>
             </main>
             <footer>For the examples used in this article, see all of them <a href="examples">here</a>.</footer>
         </article>
