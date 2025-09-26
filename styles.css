@@ -65,6 +65,14 @@ th, td {
     border: 2px solid black;
 }
 
+td.merge {
+    border-right: none;
+}
+
+td.merge + td {
+    border-left: none;
+}
+
 /* ===Font Declarations=== */
 
 @font-face {
