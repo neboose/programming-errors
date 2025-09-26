@@ -16,6 +16,10 @@ body {
     max-width: 65em;
 }
 
+main {
+    margin-bottom: 2em;
+}
+
 /* ===Code Styles=== */
 
 code {
