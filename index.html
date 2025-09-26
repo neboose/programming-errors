@@ -43,7 +43,7 @@ Q1: 5 / 2  2.5
 Incorrect!
 $</code></pre>
                     <p>How could it be incorrect? Let's figure out why. Add a trusty <code>printf</code> statement of the answer:</p>
-                    <code>printf("%f\n", answer);</code>
+<pre><code>printf("%f\n", answer);</code></pre>
 <pre><code>$ cc quiz.c -o quiz
 $ ./quiz
 Q1: 5 / 2  2.5
@@ -52,7 +52,7 @@ Incorrect!
 </code></pre>
                     <p>Well, it worked, so I guess the 5 / 2 is incorrect? Surely the computer can't mess up like that?
                     All right, let's find out:</p>
-                    <code>printf("%f\n", 5 / 2);</code>
+<pre><code>printf("%f\n", 5 / 2);</code></pre>
 <pre><code>$ cc quiz.c -o quiz
 quiz.c:8:20: warning: format specifies type 'double' but the argument has type 'int' [-Wformat]
     8 |     printf("%f\n", 5 / 2);
@@ -100,7 +100,7 @@ int main(void)
                 <p>Unlike the quiz, it does seem to work perfectly fine! We use <code>float</code>s to avoid the truncation problem, so everything seems good.
                 When you show that program to the students and performed 1 / 3, however, one student asked, <q>Are you sure 1 / 3 has infinite repeating 3's?</q>
                 <q>Yes, </q> you say. You edit the <code>printf</code> statement to display 10 decimal places like this:</p>
-                <code>printf("Answer: %.10f\n", a / b);</code>
+<pre><code>printf("Answer: %.10f\n", a / b);</code></pre>
                 <p>and are confident it will display 0.3333333333, but watch what happens:</p>
 <pre><code>$ cc calc.c -o calc
 $ ./calc
