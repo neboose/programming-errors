@@ -43,6 +43,12 @@ footer {
     font-style: italic;
 }
 
+/* ===Paragraph Styles=== */
+
+p {
+    margin: 1em 0;
+}
+
 /* ===Font Declarations=== */
 
 @font-face {
