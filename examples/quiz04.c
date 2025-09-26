@@ -1,3 +1,4 @@
+// quiz04.c: option 1 solution
 #include <stdio.h>
 
 float get_float(char *prompt);

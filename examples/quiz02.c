@@ -1,3 +1,4 @@
+// quiz02.c: printing answer
 #include <stdio.h>
 
 float get_float(char *prompt);

@@ -1,3 +1,4 @@
+// quiz06.c: use typecasting
 #include <stdio.h>
 
 float get_float(char *prompt);

@@ -1,3 +1,4 @@
+// quiz03.c: testing 5 / 2
 #include <stdio.h>
 
 float get_float(char *prompt);
