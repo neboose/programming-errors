@@ -40,6 +40,14 @@ $ ./quiz
 Q1: 5 / 2  2.5
 Incorrect!
 $</code></pre>
+                <p>How could it be incorrect? Let's figure out why. Add a trusty <code>printf</code> statement of the answer:</p>
+                <code>printf("%f\n", answer);</code>
+<pre><code>$ cc quiz.c -o quiz
+$ ./quiz
+Q1: 5 / 2  2.5
+2.500000
+Incorrect!
+</code></pre>
                 </section>
             </main>
         </article>
