@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float a = get_float("a: ");
+    float b = get_float("b: ");
+    printf("Answer: %.10f\n", a / b);
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}
