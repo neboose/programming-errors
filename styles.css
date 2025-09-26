@@ -11,6 +11,11 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
+body {
+    margin: 1em;
+    max-width: 65em;
+}
+
 /* ===Code Styles=== */
 
 code {
@@ -23,6 +28,10 @@ pre code {
     width: max-content;
     min-width: 25em;
     margin: 1em 0;
+}
+
+footer {
+    font-style: italic;
 }
 
 /* ===Font Declarations=== */
