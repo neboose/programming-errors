@@ -30,6 +30,13 @@ pre code {
     max-width: 100%;
     margin: 1em 0;
     text-wrap: initial;
+    padding: 0.5em;
+}
+
+/* ===Heading and Footer Styles=== */
+
+h1, h2 {
+    margin: 3px 0;
 }
 
 footer {
@@ -37,6 +44,7 @@ footer {
 }
 
 /* ===Font Declarations=== */
+
 @font-face {
     font-display: swap;
     font-family: 'Open Sans';
