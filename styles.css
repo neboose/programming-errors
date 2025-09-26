@@ -43,10 +43,16 @@ footer {
     font-style: italic;
 }
 
-/* ===Paragraph Styles=== */
+/* ===Text Styles=== */
 
 p {
     margin: 1em 0;
+}
+
+/* ===Font Styles=== */
+
+.equation {
+    font-family: "Cambria Math", Cambria, Calibri, "Open Sans", sans-serif;
 }
 
 /* ===Font Declarations=== */
