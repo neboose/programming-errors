@@ -40,28 +40,43 @@ $ ./quiz
 Q1: 5 / 2  2.5
 Incorrect!
 $</code></pre>
-                <p>How could it be incorrect? Let's figure out why. Add a trusty <code>printf</code> statement of the answer:</p>
-                <code>printf("%f\n", answer);</code>
+                    <p>How could it be incorrect? Let's figure out why. Add a trusty <code>printf</code> statement of the answer:</p>
+                    <code>printf("%f\n", answer);</code>
 <pre><code>$ cc quiz.c -o quiz
 $ ./quiz
 Q1: 5 / 2  2.5
 2.500000
 Incorrect!
 </code></pre>
-                <p>Well, it worked, so I guess the 5 / 2 is incorrect? Surely the computer can't mess up like that?
-                All right, let's find out:</p>
-                <code>printf("%f\n", 5 / 2);</code>
+                    <p>Well, it worked, so I guess the 5 / 2 is incorrect? Surely the computer can't mess up like that?
+                    All right, let's find out:</p>
+                    <code>printf("%f\n", 5 / 2);</code>
 <pre><code>$ cc quiz.c -o quiz
 quiz.c:8:20: warning: format specifies type 'double' but the argument has type 'int' [-Wformat]
     8 |     printf("%f\n", 5 / 2);
       |             ~~     ^~~~~
       |             %d
 $</code></pre>
-                <p>That compiler just gave us a warning! It might look a little different depending on the C compiler you use,
-                but it says that 5 / 2 is an <code>int</code>! That is because of how C works with operations.
-                Whenever you perform an operation, if both are <code>int</code>s, then the result is an <code>int</code>.
-                If the expression's result is 2.5, but it is an <code>int</code>, it just straight up cuts that decimal part out.
-                Sure enough, if you type in 2 with our quiz program, it says <q>Correct!</q>. So how can we fix this?</p>
+                    <p>That compiler just gave us a warning! It might look a little different depending on the C compiler you use,
+                    but it says that 5 / 2 is an <code>int</code>! That is because of how C works with operations.
+                    Whenever you perform an operation, if both are <code>int</code>s, then the result is an <code>int</code>.
+                    If the expression's result is 2.5, but it is an <code>int</code>, it just straight up cuts that decimal part out.
+                    Sure enough, if you type in 2 with our quiz program, it says <q>Correct!</q>. So how can we fix this?</p>
+                    <div>
+                        <b>Method 1: Adding a decimal place</b>
+                        <p>If you are just using constants, a decimal place might be a good strategy. To use this strategy,
+                        simply add <q>.0</q> to the end. Instead of 5 / 2, write
+                        <code>5.0 / 2</code>, and it works!</p>
+                    </div>
+                    <div>
+                        <b>Method 2: Typecasting a variable to a float</b>
+                        <p>If you are using a variable, you need a different strategy. It is not like you can just
+                        do <code>var.0</code>! You could make that variable into a <code>float</code>, but if you are just using it for an <code>int</code>,
+                        that might over-complicate things. Instead, use <i>typecasting</i>. This is where you add in parentheses
+                        the type you want to change it to. For example,</p>
+    <pre><code>int a = 5;
+    if (answer == (float)a / 5)</code></pre>
+                    </div>
                 </section>
             </main>
         </article>
