@@ -9,10 +9,20 @@
     </head>
     <body>
         <article>
-            <header>
+            <header id="top">
                 <h1>Three Problems with Programming</h1>
                 <hr>
             </header>
+            <nav>
+                <header>Table of Contents</header>
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#truncation">Integer Truncation</a></li>
+                    <li><a href="#imprecision">Floating-point Imprecision</a></li>
+                    <li><a href="#overflow">Integer Overflow</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
             <main>
                 <p>There are many problems with programming, but we will focus on numbers. The three we will look at are</p>
                 <ol>
@@ -23,7 +33,7 @@
                 <p>These all have to do with numbers not behaving the way they are supposed to be. Integer truncation is an
                 easy problem to fix, but floating-point imprecision and integer overflow are still problems today, and were back then.
                 For example, the Boeing 787 had to be reset at least every 249 days, otherwise its clock would overflow.</p>
-                <section>
+                <section id="truncation">
                     <header>
                         <h2>Integer Truncation</h2>
                     </header>
@@ -90,7 +100,7 @@ $</code></pre>
 if (answer == (float)a / 2)</code></pre>
                 </section>
                 <hr>
-                <section>
+                <section id="imprecision">
                     <header>
                         <h2>Floating-point Imprecision</h2>
                     </header>
@@ -134,7 +144,7 @@ double b = get_double("b: ");</code></pre>
 }</code></pre>
                 </section>
                 <hr>
-                <section>
+                <section id="overflow">
                     <header>
                         <h2>Integer Overflow</h2>
                     </header>
@@ -228,7 +238,7 @@ Answer: -194305179</code></pre>
                         </tbody>
                     </table>
                 </section>
-                <section>
+                <section id="resources">
                     <h2>Resources</h2>
                     <div><a href="https://en.wikipedia.org/wiki/C_data_types">C data types</a></div>
                     <div><a href="https://en.wikipedia.org/wiki/Integer_overflow">Integer Overflow</a></div>
