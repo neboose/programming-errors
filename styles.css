@@ -1,4 +1,4 @@
-/* ---Document Styles--- */
+/* ===Document Styles=== */
 
 * {
     margin: 0;
@@ -8,4 +8,14 @@
 
 html {
     font-size: 1.5em;
+}
+
+/* ===Code Styles=== */
+
+pre code {
+    display: block;
+    background-color: lightgray;
+    width: max-content;
+    min-width: 25em;
+    margin: 1em 0;
 }
