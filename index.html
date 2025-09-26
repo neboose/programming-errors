@@ -14,9 +14,32 @@
             <main>
                 <section>
                     <header>
-                        <h2></h2>
+                        <h2>Float Truncation</h2>
                     </header>
-                    <p></p>
+                    <p>Let's say you were making a division quiz to test on your students in C, who are working on division with decimals.
+                    You decide to start relatively easy, with 5 / 2. Your code might look something like this. (Let's say you implemented get_float
+                    or used a library).</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    if (answer == 5 / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}</code></pre>
+                    <p>Let's give this a test to see if it works so far.</p>
+<pre><code>$ cc quiz.c -o quiz
+$ ./quiz
+Q1: 5 / 2  2.5
+Incorrect!
+$</code></pre>
                 </section>
             </main>
         </article>
