@@ -20,6 +20,31 @@ main {
     margin-bottom: 2em;
 }
 
+article {
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (max-width: 65em) {
+    article {
+        flex-direction: column;
+    }
+
+    article nav {
+        max-width: 100%;
+        order: 0;
+        margin-bottom: 1em;
+    }
+
+    #content {
+        order: 1;
+    }
+}
+
+#content {
+    flex: 1;
+}
+
 /* ===Code Styles=== */
 
 code {
@@ -28,7 +53,7 @@ code {
 
 pre code {
     display: block;
-    background-color: lightgray;
+    background-color: #ccc;
     width: max-content;
     min-width: 25em;
     max-width: 100%;
@@ -55,18 +80,24 @@ footer {
 /* ===Navigation Styles=== */
 
 nav {
-    background-color: navy;
+    background-color: #0a0;
     position: sticky;
     top: 0;
-    float: right;
+    max-width: 25%;
+    order: 1;
 }
 
-nav ul li a {
+nav ul li a, nav > header {
     color: #fff;
 }
 
 nav ul {
     list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* ===Text Styles=== */
