@@ -243,14 +243,6 @@ Answer: -194305179</code></pre>
                     <h2>Resources</h2>
                     <div><a href="https://en.wikipedia.org/wiki/C_data_types">C data types</a></div>
                     <div><a href="https://en.wikipedia.org/wiki/Integer_overflow">Integer Overflow</a></div>
-                <p>Why is it negative? The answer is because of <i>integer overflow</i>. Integers take up 4 bytes of space.
-                This is 32 bits (4 * 8). To calculate the amount an integer can go up to, we can use the following equation:</p>
-                <p>2<sup>32 - 1</sup>- 1</p>
-                <p>The 2 is because it is base-2, or the binary system. We have to subtract one bit to account for the other
-                half to be negative numbers, and subtract another one to account for 0. This expression evaluates to be
-                2,147,483,647. 49353 * 51678 evaluates to be 2,550,464,334, more than the amount that can be stored in an
-                integer. As a result, it wraps around to -2,147,483,647 and cuts that extra amount off.</p>
-                <p>What are some solutions to this problem?</p>
                 </section>
             </main>
             <footer>For the examples used in this article, see all of them <a href="examples">here</a>.</footer>
