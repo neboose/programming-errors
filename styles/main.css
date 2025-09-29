@@ -43,6 +43,7 @@ article {
 
 #content {
     flex: 1;
+    width: min(65em, 100%);
 }
 
 /* ===Code Styles=== */
