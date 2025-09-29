@@ -8,7 +8,7 @@
 
 html {
     font-size: 1.5em;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Sans-serif Fallback", sans-serif;
 }
 
 body {
@@ -33,7 +33,6 @@ article {
         max-width: 100%;
         order: 0;
         margin-bottom: 1em;
-        position: fixed;
     }
 
     #content {
@@ -49,7 +48,7 @@ article {
 /* ===Code Styles=== */
 
 code {
-    font-family: "Inconsolata", monospace;
+    font-family: "Inconsolata", "Monospace Fallback", monospace;
 }
 
 pre code {
@@ -134,36 +133,4 @@ td.merge + td {
 
 .wrapper {
     overflow: auto;
-}
-
-/* ===Font Declarations=== */
-
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/open-sans.woff2') format('woff2');
-}
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/open-sans-italic.woff2') format('woff2');
-}
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/open-sans-bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Inconsolata';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/inconsolata.woff2') format('woff2');
 }

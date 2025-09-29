@@ -29,3 +29,15 @@
   font-weight: 400;
   src: url('/fonts/inconsolata.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: "Sans-serif Fallback";
+    size-adjust: 105.44%;
+    src: local(sans-serif);
+}
+
+@font-face {
+    font-family: "Monospace Fallback";
+    size-adjust: 134.25%;
+    src: local(monospace);
+}
