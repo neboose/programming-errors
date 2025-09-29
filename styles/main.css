@@ -22,7 +22,6 @@ main {
 
 article {
     display: flex;
-    align-items: flex-start;
 }
 
 @media (max-width: 100em) {
@@ -34,6 +33,7 @@ article {
         max-width: 100%;
         order: 0;
         margin-bottom: 1em;
+        position: fixed;
     }
 
     #content {
@@ -130,6 +130,10 @@ td.merge {
 
 td.merge + td {
     border-left: none;
+}
+
+.wrapper {
+    overflow: auto;
 }
 
 /* ===Font Declarations=== */

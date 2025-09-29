@@ -67,6 +67,7 @@ $ ./quiz
 Q1: 5 / 2  2.5
 Incorrect!
 $</code></pre>
+
                         <p>How could it be incorrect? Let's figure out why. Add a trusty <code>printf</code> statement of the answer:</p>
 <pre><code>printf("%f\n", answer);</code></pre>
 <pre><code>$ cc quiz.c -o quiz
@@ -202,47 +203,49 @@ Answer: -194305179</code></pre>
     printf("Answer: %u\n", a * b);
 }</code></pre>
                         <p>Here is a table showing the minimum ranges for these data types.</p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Minimum Range</th>
-                                    <th>Typical Range</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>int</code></td>
-                                    <td>-32,768 to 32,767</td>
-                                    <td>-2,147,483,648 to 2,147,483,647</td>
-                                </tr>
-                                <tr>
-                                    <td><code>unsigned int</code></td>
-                                    <td>0 to 65,535</td>
-                                    <td>0 to 4,294,967,295</td>
-                                </tr>
-                                <tr>
-                                    <td><code>long</code></td>
-                                    <td>-2,147,483,648 to 2,147,483,647</td>
-                                    <td>-9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
-                                </tr>
-                                <tr>
-                                    <td><code>unsigned long</code></td>
-                                    <td>0 to 4,294,967,295</td>
-                                    <td>0 to 18,446,744,073,709,551,615</td>
-                                </tr>
-                                <tr>
-                                    <td><code>long long</code></td>
-                                    <td class="merge">Almost always -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><code>unsigned long long</code></td>
-                                    <td class="merge">Almost always 0 to 18,446,744,073,709,551,615</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Minimum Range</th>
+                                        <th>Typical Range</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>int</code></td>
+                                        <td>-32,768 to 32,767</td>
+                                        <td>-2,147,483,648 to 2,147,483,647</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>unsigned int</code></td>
+                                        <td>0 to 65,535</td>
+                                        <td>0 to 4,294,967,295</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>long</code></td>
+                                        <td>-2,147,483,648 to 2,147,483,647</td>
+                                        <td>-9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>unsigned long</code></td>
+                                        <td>0 to 4,294,967,295</td>
+                                        <td>0 to 18,446,744,073,709,551,615</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>long long</code></td>
+                                        <td class="merge">Almost always -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>unsigned long long</code></td>
+                                        <td class="merge">Almost always 0 to 18,446,744,073,709,551,615</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </section>
                     <section id="resources">
                         <h2>Resources</h2>
