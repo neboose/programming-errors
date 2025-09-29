@@ -25,7 +25,7 @@ article {
     align-items: flex-start;
 }
 
-@media (max-width: 65em) {
+@media (max-width: 100em) {
     article {
         flex-direction: column;
     }
