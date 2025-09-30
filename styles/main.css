@@ -26,22 +26,6 @@ article {
     width: 100%;
 }
 
-@media (max-width: 100em) {
-    article {
-        flex-direction: column;
-    }
-
-    article nav {
-        max-width: 100%;
-        order: 0;
-        margin-bottom: 1em;
-    }
-
-    #content {
-        order: 1;
-    }
-}
-
 #content {
     width: min(65em, 100%);
 }
@@ -84,7 +68,7 @@ nav {
     background-color: #0a0;
     position: sticky;
     top: 0;
-    max-width: 25%;
+    max-width: 100%;
     order: 1;
 }
 
