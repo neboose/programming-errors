@@ -12,7 +12,6 @@ html {
 
 body {
     margin: 1em;
-    max-width: min(65em, 100%);
 }
 
 main {
@@ -22,6 +21,9 @@ main {
 article {
     display: flex;
     gap: 1em;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 @media (max-width: 100em) {
@@ -41,7 +43,6 @@ article {
 }
 
 #content {
-    flex: 1;
     width: min(65em, 100%);
 }
 
