@@ -63,12 +63,13 @@ footer {
 
 /* ===Navigation Styles=== */
 
+aside {
+    position: sticky;
+    top: 0.5em;
+}
+
 nav {
     background-color: #0a0;
-    position: sticky;
-    top: 0;
-    max-width: 100%;
-    order: 1;
 }
 
 nav ul li a, nav > header {
