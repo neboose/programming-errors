@@ -22,7 +22,6 @@ article {
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
-    width: 65em;
     max-width: 100%;
     align-items: start;
 }
