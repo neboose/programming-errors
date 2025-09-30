@@ -23,6 +23,7 @@ article {
     gap: 1em;
     flex-wrap: wrap;
     width: min(65em, 100%);
+    align-items: start;
 }
 
 #content {
