@@ -7,7 +7,6 @@
 }
 
 html {
-    font-size: 1.5em;
     font-family: "Open Sans", "Sans-serif Fallback", sans-serif;
 }
 
@@ -22,6 +21,7 @@ main {
 
 article {
     display: flex;
+    gap: 1em;
 }
 
 @media (max-width: 100em) {
