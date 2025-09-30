@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    margin: 1em 1em 1em 5em;
+    margin: 1em;
 }
 
 main {
@@ -22,12 +22,14 @@ article {
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
-    width: min(65em, 100%);
+    width: 65em;
+    max-width: 100%;
     align-items: start;
 }
 
 #content {
-    width: 75%;
+    width: max(65em, 75%);
+    max-width: 100%;
 }
 
 /* ===Code Styles=== */
