@@ -50,7 +50,7 @@
                             <h2>Integer Truncation</h2>
                         </header>
                         <p>Let's say you were making a division quiz to test on your students in C, who are working on division with decimals.
-                        You decide to start relatively easy, with 5 / 2. Your code might look something like this. (Let's say you implemented <code>get_float
+                        You decide to start relatively easy, with <span class="equation">5 / 2</span>. Your code might look something like this. (Let's say you implemented <code>get_float
                         </code>or used a library).</p>
 <pre><code>#include &lt;stdio.h&gt;
 
@@ -92,9 +92,9 @@ quiz.c:8:20: warning: format specifies type 'double' but the argument has type '
     |             %d
 $</code></pre>
                         <p>That compiler just gave us a warning! It might look a little different depending on the C compiler you use,
-                        but it says that 5 / 2 is an <code>int</code>! That is because of how C works with operations.
+                        but it says that <span class="equation">5 / 2</span> is an <code>int</code>! That is because of how C works with operations.
                         Whenever you perform an operation, if both are <code>int</code>s, then the result is an <code>int</code>.
-                        If the expression's result is 2.5, but it is an <code>int</code>, it just straight up cuts that decimal part out.
+                        If the expression's result is <span class="equation">2.5</span>, but it is an <code>int</code>, it just straight up cuts that decimal part out.
                         Sure enough, if you type in 2 with our quiz program, it says "Correct!". So how can we fix this?</p>
                         <p>
                             <b>Method 1: Adding a decimal place</b><br>
@@ -130,25 +130,27 @@ int main(void)
 }
 </code></pre>
                     <p>Unlike the quiz, it does seem to work perfectly fine! We use <code>float</code>s to avoid the truncation problem, so everything seems good.
-                    When you show that program to the students and performed 1 / 3, however, one student asked, <q>Are you sure 1 / 3 has infinite repeating 3's?</q>
+                    When you show that program to the students and performed <span class="equation">1 / 3</span>, however, one student asked, 
+                    <q>Are you sure <span class="equation">1 / 3</span> has infinite repeating 3's?</q>
                     <q>Yes, </q> you say. You edit the <code>printf</code> statement to display 10 decimal places like this:</p>
 <pre><code>printf("Answer: %.10f\n", a / b);</code></pre>
-                    <p>and are confident it will display 0.3333333333, but watch what happens:</p>
+                    <p>and are confident it will display <span class="equation">0.3333333333</span>, but watch what happens:</p>
 <pre><code>$ cc calc.c -o calc
 $ ./calc
 a: 1
 b: 3
 Answer: 0.3333333433
 </code></pre>
-                    <p>Why is the answer 0.33333334? Floating-point imprecision. Remember, the computer works in base-2, or the <i>binary system</i>. 
+                    <p>Why is the answer <span class="equation">0.33333334</span>? Floating-point imprecision. Remember, the computer works in base-2, or the <i>binary system</i>. 
                     We work in base-10, or the <i>decimal system</i>.
                     When converting binary to decimal, there is a little bit of imprecision. If you ever need more precision, you may use
                     the <code>double</code> type in C to well, <em>double</em> the precision.</p>
 <pre><code>double a = get_double("a: ");
 double b = get_double("b: ");</code></pre>
-                    <p>Now the answer is correctly 0.3333333333.</p>
+                    <p>Now the answer is correctly <span class="equation">0.3333333333</span>.</p>
                     <p>Floating-point imprecision still remains a problem, though. There is still imprecision even with the <code>double</code>
-                    type. It is often annoying in the real world, when it displays 1.20000000000001 instead of 1.2 (<code>printf</code> fixes
+                    type. It is often annoying in the real world, when it displays <span class="equation">1.20000000000001</span>
+                    instead of <span class="equation">1.2</span> (<code>printf</code> fixes
                     the problem, but never ending decimals still have imprecision). Thus, when comparing two numbers, instead of directly checking
                     for equality, you could have a range of values accounting for floating-point imprecision:</p>
 <pre><code>if (a > 0.33 && a < 0.34)
@@ -184,8 +186,9 @@ Answer: -194305179</code></pre>
                         <div class="equation">2<sup>32 - 1</sup>- 1</div>
                         <p>The 2 is because it is base-2, or the binary system. We have to subtract one bit to account for the other
                         half to be negative numbers, and subtract another one to account for 0. This expression evaluates to be
-                        2,147,483,647. <span class="equation">49353 * 51678</span> evaluates to be 2,550,464,334, more than the amount that can be stored in an
-                        integer. As a result, it wraps around to -2,147,483,647 and cuts that extra amount off.</p>
+                        <span class="equation">2,147,483,647</span>. <span class="equation">49353 * 51678</span> evaluates to be 
+                        <span class="equation">2,550,464,334</span>, more than the amount that can be stored in an
+                        integer. As a result, it wraps around to <span class="equation">-2,147,483,647</span> and cuts that extra amount off.</p>
                         <p>To fix this, we can use the <code>long</code> type, or the <code>long long</code> type. These types 
                         use up more memory, so it can go higher.</p>
 <pre><code>int main(void)
@@ -221,32 +224,32 @@ Answer: -194305179</code></pre>
                                 <tbody>
                                     <tr>
                                         <td><code>int</code></td>
-                                        <td>-32,768 to 32,767</td>
-                                        <td>-2,147,483,648 to 2,147,483,647</td>
+                                        <td><span class="equation">-32,768</span> to <span class="equation">32,767</span></td>
+                                        <td><span class="equation">-2,147,483,648</span> to <span class="equation">2,147,483,647</span></td>
                                     </tr>
                                     <tr>
                                         <td><code>unsigned int</code></td>
-                                        <td>0 to 65,535</td>
-                                        <td>0 to 4,294,967,295</td>
+                                        <td><span class="equation">0</span> to <span class="equation">65,535</span></td>
+                                        <td><span class="equation">0</span> to <span class="equation">4,294,967,295</span></td>
                                     </tr>
                                     <tr>
                                         <td><code>long</code></td>
-                                        <td>-2,147,483,648 to 2,147,483,647</td>
-                                        <td>-9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
+                                        <td><span class="equation">-2,147,483,648</span> to <span class="equation">2,147,483,647</span></td>
+                                        <td><span class="equation">-9,223,372,036,854,775,807</span> to <span class="equation">9,223,372,036,854,775,807</span></td>
                                     </tr>
                                     <tr>
                                         <td><code>unsigned long</code></td>
-                                        <td>0 to 4,294,967,295</td>
-                                        <td>0 to 18,446,744,073,709,551,615</td>
+                                        <td><span class="equation">0</span> to <span class="equation">4,294,967,295</span></td>
+                                        <td><span class="equation">0</span> to <span class="equation">18,446,744,073,709,551,615</span></td>
                                     </tr>
                                     <tr>
                                         <td><code>long long</code></td>
-                                        <td class="merge">Almost always -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807</td>
+                                        <td class="merge">Almost always <span class="equation">-9,223,372,036,854,775,807</span> to <span class="equation">9,223,372,036,854,775,807</span></td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <td><code>unsigned long long</code></td>
-                                        <td class="merge">Almost always 0 to 18,446,744,073,709,551,615</td>
+                                        <td class="merge">Almost always <span class="equation">0</span> to <span class="equation">18,446,744,073,709,551,615</span></td>
                                         <td></td>
                                     </tr>
                                 </tbody>
