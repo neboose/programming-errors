@@ -86,11 +86,11 @@ Incorrect!
                         All right, let's find out:</p>
 <pre><code>printf("%f\n", 5 / 2);</code></pre>
 <pre><code>$ cc quiz.c -o quiz
-    quiz.c:8:20: warning: format specifies type 'double' but the argument has type 'int' [-Wformat]
-        8 |     printf("%f\n", 5 / 2);
-        |             ~~     ^~~~~
-        |             %d
-    $</code></pre>
+quiz.c:8:20: warning: format specifies type 'double' but the argument has type 'int' [-Wformat]
+    8 |     printf("%f\n", 5 / 2);
+    |             ~~     ^~~~~
+    |             %d
+$</code></pre>
                         <p>That compiler just gave us a warning! It might look a little different depending on the C compiler you use,
                         but it says that 5 / 2 is an <code>int</code>! That is because of how C works with operations.
                         Whenever you perform an operation, if both are <code>int</code>s, then the result is an <code>int</code>.
