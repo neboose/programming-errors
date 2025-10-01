@@ -82,9 +82,10 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 76em)
+@media (max-width: 75em)
 {
     nav ul {
         flex-direction: row;
@@ -92,6 +93,11 @@ nav ul {
 
     nav > header {
         display: none;
+    }
+
+    aside nav ul li:hover 
+    {
+        margin: 0 0.5em;
     }
 }
 
