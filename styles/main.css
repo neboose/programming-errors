@@ -69,10 +69,8 @@ aside {
     position: sticky;
     top: 0.5em;
     flex: 1;
-}
-
-nav {
     background-color: #0a0;
+    font-size: 1.5em;
 }
 
 nav ul li a, nav > header {
@@ -98,11 +96,24 @@ nav ul {
 
 nav ul li {
     margin-right: 1em;
+    transition-property: margin;
+    transition-duration: 0.5s;
+}
+
+nav ul li:hover {
+    margin: 0.5em 0;
 }
 
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+nav ul li a:hover {
+    color: #00c;
+    text-decoration: underline;
 }
 
 /* ===Text Styles=== */
