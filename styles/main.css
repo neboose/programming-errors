@@ -28,7 +28,7 @@ article {
 }
 
 #content {
-    width: max(65em, 75%);
+    width: 65em;
     max-width: 100%;
 }
 
@@ -69,7 +69,7 @@ footer {
 aside {
     position: sticky;
     top: 0.5em;
-    flex: 1;
+    flex-shrink: 1;
     background-color: #0a0;
     font-size: 1.5em;
 }
@@ -85,7 +85,7 @@ nav ul {
     flex-wrap: wrap;
 }
 
-@media (max-width: 75em)
+@media (max-width: 92em)
 {
     nav ul {
         flex-direction: row;
