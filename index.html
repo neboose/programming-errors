@@ -28,7 +28,7 @@
                 </nav>
             </aside>
             <div id="content">
-                <header id="top">
+                <header>
                     <h1>Three Problems with Programming</h1>
                     <hr>
                 </header>
@@ -82,7 +82,7 @@ Q1: 5 / 2  2.5
 2.500000
 Incorrect!
 </code></pre>
-                        <p>Well, it worked, so I guess the 5 / 2 is incorrect? Surely the computer can't mess up like that?
+                        <p>Well, it worked, so I guess the <span class="equation">5 / 2</span> is incorrect? Surely the computer can't mess up like that?
                         All right, let's find out:</p>
 <pre><code>printf("%f\n", 5 / 2);</code></pre>
 <pre><code>$ cc quiz.c -o quiz
@@ -99,7 +99,7 @@ $</code></pre>
                         <p>
                             <b>Method 1: Adding a decimal place</b><br>
                             If you are just using constants, a decimal place might be a good strategy. To use this strategy,
-                            simply add ".0" to the end. Instead of 5 / 2, write
+                            simply add ".0" to the end. Instead of <span class="equation">5 / 2</span>, write
                             <code>5.0 / 2</code>, and it works!
                         </p>
                         <p>
@@ -263,7 +263,7 @@ Answer: -194305179</code></pre>
                         <div><a href="https://en.wikipedia.org/wiki/Integer_overflow">Integer Overflow</a></div>
                     </section>
                 </main>
-                <footer>See all the <a href="examples/">programs</a> used in this article.</footer>
+                <footer>See all the <a href="examples.html">programs</a> used in this article.</footer>
             </div>
         </article>
     </body>
