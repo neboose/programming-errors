@@ -68,6 +68,7 @@ footer {
 aside {
     position: sticky;
     top: 0.5em;
+    flex: 1;
 }
 
 nav {
@@ -80,6 +81,23 @@ nav ul li a, nav > header {
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 76em)
+{
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav > header {
+        display: none;
+    }
+}
+
+nav ul li {
+    margin-right: 1em;
 }
 
 nav ul li a {
