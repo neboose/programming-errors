@@ -95,8 +95,7 @@ nav ul {
         display: none;
     }
 
-    aside nav ul li:hover 
-    {
+    aside nav ul li:hover {
         margin: 0 0.5em;
     }
 }
