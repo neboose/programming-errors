@@ -41,6 +41,7 @@ code {
 pre code {
     display: block;
     background-color: #ccc;
+    min-width: 25em;
     width: max-content;
     max-width: 100%;
     margin: 1em 0;
