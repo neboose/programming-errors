@@ -88,6 +88,24 @@ nav ul {
     flex-wrap: wrap;
 }
 
+nav ul li {
+    margin-right: 1em;
+    transition-property: margin;
+    transition-duration: 0.5s;
+}
+
+@media (hover: hover)
+{
+    nav ul li:hover {
+        margin: 0.5em 1em 0.5em 0;
+    }
+
+    nav ul li a:hover {
+        color: #00c;
+        text-decoration: underline;
+    }
+}
+
 @media (max-width: 92em)
 {
     nav ul {
@@ -98,19 +116,12 @@ nav ul {
         display: none;
     }
 
-    aside nav ul li:hover {
-        margin-left: 0.5em;
+    @media (hover: hover)
+    {
+        nav ul li:hover {
+            margin-left: 0.5em;
+        }
     }
-}
-
-nav ul li {
-    margin-right: 1em;
-    transition-property: margin;
-    transition-duration: 0.5s;
-}
-
-nav ul li:hover {
-    margin: 0.5em 1em 0.5em 0;
 }
 
 nav ul li a {
@@ -118,11 +129,6 @@ nav ul li a {
     font-weight: bold;
     transition-property: color;
     transition-duration: 1s;
-}
-
-nav ul li a:hover {
-    color: #00c;
-    text-decoration: underline;
 }
 
 /* ===Text Styles=== */
