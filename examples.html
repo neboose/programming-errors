@@ -19,10 +19,316 @@
             <hr>
         </header>
         <main>
-            <ol>
-                <li><a href="code.zip">Download</a> all of the source code files</li> 
-                <li><a href="code/">Browse</a> the source code files</li>
-            </ol>
+            <p><a href="code.zip">Download</a> all of the source code files.</p> 
+            <hr>
+            <p>quiz01.c</p>
+            <pre><code>// quiz01.c: start
+#include &lt;stdio.h&gt;
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    if (answer == 5 / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+
+            <p>quiz02.c</p>
+            <pre><code>// quiz02.c: printing answer
+#include &lt;stdio.h&gt;
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    printf("%f\n", answer);
+    if (answer == 5 / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+            <p>quiz03.c</p>
+            <pre><code>// quiz03.c: testing 5 / 2
+#include <stdio.h>
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    printf("%f\n", 5 / 2);
+    if (answer == 5 / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+            <p>quiz04.c</p>
+            <pre><code>// quiz04.c: option 1 solution
+#include &lt;stdio.h&gt;
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    if (answer == 5.0 / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+            <p>quiz05.c</p>
+            <pre><code>// quiz05.c: use a float variable
+#include &lt;stdio.h&gt;
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    float a = 5;
+    if (answer == a / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+            <p>quiz06.c</p>
+            <pre><code>// quiz06.c: use typecasting
+#include &lt;stdio.h&gt;
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float answer = get_float("Q1: 5 / 2  ");
+    int a = 5;
+    if (answer == (float)a / 2)
+    {
+        printf("Correct!\n");
+    }
+    else
+    {
+        printf("Incorrect!\n");
+    }
+    return 0;
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+            <hr>
+            <p>calc01.c</p>
+            <pre><code>// calc01.c: the base
+#include &lt;stdio.h&gt;
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float a = get_float("a: ");
+    float b = get_float("b: ");
+    printf("Answer: %f\n", a / b);
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+        <p>calc02.c</p>
+        <pre><code>// calc02.c: introduction to floating-point imprecision
+#include <stdio.h>
+
+float get_float(char *prompt);
+
+int main(void)
+{
+    float a = get_float("a: ");
+    float b = get_float("b: ");
+    printf("Answer: %.10f\n", a / b);
+}
+
+float get_float(char *prompt)
+{
+    printf("%s", prompt);
+    float input;
+    scanf("%f", &input);
+    return input;
+}</code></pre>
+            <p>calc03.c</p>
+            <pre><code>// calc03.c: introducing the double type
+#include &lt;stdio.h&gt;
+
+double get_double(char *prompt);
+
+int main(void)
+{
+    double a = get_double("a: ");
+    double b = get_double("b: ");
+    printf("Answer: %.10f\n", a / b);
+}
+
+double get_double(char *prompt)
+{
+    printf("%s", prompt);
+    double input;
+    scanf("%lf", &input);
+    return input;
+}</code></pre>
+            <p>mul01.c</p>
+            <pre><code>// mul01.c: the base
+#include &lt;stdio.h&gt;
+
+int get_int(char *prompt);
+
+int main(void)
+{
+    int a = get_int("a: ");
+    int b = get_int("b: ");
+    printf("Answer: %i\n", a * b);
+}
+
+int get_int(char *prompt)
+{
+    printf("%s", prompt);
+    int input;
+    scanf("%i", &input);
+    return input;
+}</code></pre>
+            <p>mul02.c</p>
+            <pre><code>// mul02.c: using longs
+#include &lt;stdio.h&gt;
+
+long get_long(char *prompt);
+
+int main(void)
+{
+    long a = get_long("a: ");
+    long b = get_long("b: ");
+    printf("Answer: %li\n", a * b);
+}
+
+long get_long(char *prompt)
+{
+    printf("%s", prompt);
+    long input;
+    scanf("%li", &input);
+    return input;
+}</code></pre>
+            <p>mul03.c</p>
+            <pre><code>// mul03.c: using long longs
+#include &lt;stdio.h&gt;
+
+long long get_long_long(char *prompt);
+
+int main(void)
+{
+    long long a = get_long_long("a: ");
+    long long b = get_long_long("b: ");
+    printf("Answer: %lli\n", a * b);
+}
+
+long long get_long_long(char *prompt)
+{
+    printf("%s", prompt);
+    long long input;
+    scanf("%lli", &input);
+    return input;
+}</code></pre>
+            <p>mul04.c</p>
+            <pre><code>// mul04.c: using unsigned ints
+#include <stdio.h>
+
+unsigned int get_unsigned_int(char *prompt);
+
+int main(void)
+{
+    unsigned int a = get_unsigned_int("a: ");
+    unsigned int b = get_unsigned_int("b: ");
+    printf("Answer: %u\n", a * b);
+}
+
+unsigned int get_unsigned_int(char *prompt)
+{
+    printf("%s", prompt);
+    unsigned int input;
+    scanf("%u", &input);
+    return input;
+}</code></pre>
         </main>
         <footer><a href="index.html">Return</a> to the article.</footer>
     </body>
