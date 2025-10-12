@@ -80,10 +80,6 @@ aside {
     font-weight: bold;
 }
 
-aside > header {
-    color: #0a0;
-}
-
 nav ul {
     list-style-type: none;
     display: flex;
