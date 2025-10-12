@@ -9,6 +9,7 @@
 html {
     font-family: "Open Sans", "Sans-serif Fallback", sans-serif;
     line-height: 1.5;
+    color: #333;
 }
 
 body {
@@ -42,6 +43,7 @@ pre {
     overflow-x: auto;
     background-color: #ccc;
     margin: 1em 0;
+    color: #000;
 }
 
 pre code {
